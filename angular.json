@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sirius-ui-lib": {
+      "projectType": "library",
+      "root": "projects/sirius-ui-lib",
+      "sourceRoot": "projects/sirius-ui-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sirius-ui-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sirius-ui-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sirius-ui-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/sirius-ui-lib/.storybook",
+            "browserTarget": "sirius-ui-lib:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/sirius-ui-lib"
+            ],
+            "port": 6006
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
