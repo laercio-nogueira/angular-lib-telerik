@@ -7,7 +7,6 @@ const meta: Meta<PageComponent> = {
   title: 'Components/Page',
   component: PageComponent,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen',
   },
 };
@@ -15,7 +14,6 @@ const meta: Meta<PageComponent> = {
 export default meta;
 type Story = StoryObj<PageComponent>;
 
-// More on interaction testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const LoggedIn: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);

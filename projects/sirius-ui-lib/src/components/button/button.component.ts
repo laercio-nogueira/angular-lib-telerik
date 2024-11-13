@@ -2,7 +2,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { KENDO_BUTTONS } from "@progress/kendo-angular-buttons";
 
 @Component({
-  selector: 'storybook-button',
+  selector: 'sirius-lib-button',
   standalone: true,
   imports: [KENDO_BUTTONS],
   template: ` <button

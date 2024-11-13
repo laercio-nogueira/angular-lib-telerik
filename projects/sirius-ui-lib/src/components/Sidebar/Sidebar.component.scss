@@ -1,0 +1,66 @@
+.sidebar-components {
+  & .sidebar {
+    margin: 0 auto;
+    padding: 0 auto;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+    text-decoration: none;
+    font: 10px 'Open Sans', sans-serif;
+  
+    & header {
+      font-size: 22px;
+      color: white;
+      line-height: 70px;
+      text-align: center;
+      background: #063146;
+      user-select: none;
+    }
+  
+    & ul {
+      list-style: none;
+      margin-left: -40px;
+
+      & li:hover a {
+        background: hwb(200 2% 63% / 0.975);
+      }
+    }
+  
+    & a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 65px;
+      font-size: 20px;
+      color: white;
+      padding-left: 20px;
+      box-sizing: border-box;
+      border-bottom: 1px solid black;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      transition: .4s;
+      text-decoration: none;
+
+      & i {
+        margin-right: 16px;
+      }
+    }
+  }
+  
+  & .burguer-menu {
+    background: none;
+    border: none;
+  
+    & img {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+  
+  & .active {
+    left: 0 !important;
+  }
+}

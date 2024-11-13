@@ -1,17 +1,17 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from '../button/button.component';
+import { ButtonComponent } from '../Button/button.component';
 
 interface User {
   name: string;
 }
 
 @Component({
-  selector: 'storybook-header',
+  selector: 'sirius-lib-header',
   standalone: true,
   imports: [CommonModule, ButtonComponent],
   template: `<header>
-  <div class="storybook-header">
+  <div class="sirius-lib-header">
     <div>
       <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fillRule="evenodd">
@@ -34,29 +34,29 @@ interface User {
           Welcome, <b>{{ user.name }}</b
           >!
         </span>
-        <storybook-button
+        <sirius-lib-button
           *ngIf="user"
           size="small"
           (onClick)="onLogout.emit($event)"
           label="Log out"
-        ></storybook-button>
+        ></sirius-lib-button>
       </div>
       <div *ngIf="!user">
-        <storybook-button
+        <sirius-lib-button
           *ngIf="!user"
           size="small"
           class="margin-left"
           (onClick)="onLogin.emit($event)"
           label="Log in"
-        ></storybook-button>
-        <storybook-button
+        ></sirius-lib-button>
+        <sirius-lib-button
           *ngIf="!user"
           size="small"
           [primary]="true"
           class="margin-left"
           (onClick)="onCreateAccount.emit($event)"
           label="Sign up"
-        ></storybook-button>
+        ></sirius-lib-button>
       </div>
     </div>
   </div>

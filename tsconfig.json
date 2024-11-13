@@ -21,14 +21,12 @@
       "ES2022",
       "dom"
     ],
+    "baseUrl": "./",
     "paths": {
       "sirius-ui-lib": [
-        "./dist/sirius-ui-lib"
+        "dist"
       ],
-      "ui-lib": [
-        "./dist/ui-lib"
-      ]
-    }
+    },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

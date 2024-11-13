@@ -14,7 +14,27 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/sirius-ui-lib/src/components/MainContainer/main-container.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {},\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -24,81 +44,41 @@
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
             },
             {
-                "name": "Large",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    //size: 'large',\n    // label: 'Button',\n  },\n}"
-            },
-            {
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
             },
             {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Components/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                "defaultValue": "{\n  title: 'Components/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  args: { onClick: fn() },\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<HeaderComponent>",
-                "defaultValue": "{\n  title: 'Components/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ModeloComponent>",
-                "defaultValue": "{\n  title: 'Components/Modelo',\n  component: ModeloComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  // args: { onClick: fn() },\n}"
+                "defaultValue": "{\n  title: 'Components/Header',\n  component: HeaderComponent,\n  tags: ['autodocs'],\n  parameters: {\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
             },
             {
                 "name": "meta",
@@ -114,11 +94,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\n  title: 'Components/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                "defaultValue": "{\n  title: 'Components/Page',\n  component: PageComponent,\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SidebarComponent>",
+                "defaultValue": "{\n  title: 'Components/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  // args: { onClick: fn() },\n}"
             },
             {
                 "name": "preview",
@@ -134,61 +124,31 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
             },
             {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    // primary: true,\n    // label: 'Modelo',\n  },\n}"
-            },
-            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
             },
             {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    // label: 'Button',\n  },\n}"
-            },
-            {
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    // size: 'small',\n    // label: 'Button',\n  },\n}"
             }
         ],
         "functions": [],
@@ -198,7 +158,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonComponent>",
-                "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -209,18 +169,7 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<HeaderComponent>",
-                "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<ModeloComponent>",
-                "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -242,7 +191,18 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<PageComponent>",
-                "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SidebarComponent>",
+                "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -251,6 +211,28 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/sirius-ui-lib/src/components/Header/header.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<HeaderComponent>",
+                    "defaultValue": "{\n  title: 'Components/Header',\n  component: HeaderComponent,\n  tags: ['autodocs'],\n  parameters: {\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
+                }
+            ],
             "projects/sirius-ui-lib/src/components/MainContainer/main-container.stories.ts": [
                 {
                     "name": "Default",
@@ -273,12 +255,34 @@
                     "defaultValue": "{\n  title: 'Components/MainContainer',\n  tags: ['autodocs'],\n  component: MainContainerComponent,\n  argTypes: {},\n  decorators: [\n    moduleMetadata({\n      declarations: [MainContainerComponent],\n      imports: [LayoutModule, CommonModule, BrowserModule, BrowserAnimationsModule,],\n    })\n  ],\n  args: {},\n}"
                 }
             ],
-            "projects/sirius-ui-lib/src/components/button/button.stories.ts": [
+            "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {},\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SidebarComponent>",
+                    "defaultValue": "{\n  title: 'Components/Sidebar',\n  component: SidebarComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  // args: { onClick: fn() },\n}"
+                }
+            ],
+            "projects/sirius-ui-lib/src/components/Button/button.stories.ts": [
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -288,17 +292,17 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Components/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  args: { onClick: fn() },\n}"
+                    "defaultValue": "{\n  title: 'Components/Button',\n  component: ButtonComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n  args: { onClick: fn() },\n}"
                 },
                 {
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -308,7 +312,7 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -318,103 +322,19 @@
                     "name": "Small",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
                 }
             ],
-            "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    //size: 'large',\n    // label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ModeloComponent>",
-                    "defaultValue": "{\n  title: 'Components/Modelo',\n  component: ModeloComponent,\n  tags: ['autodocs'],\n  argTypes: {},\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\n  // args: { onClick: fn() },\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    // primary: true,\n    // label: 'Modelo',\n  },\n}"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    // label: 'Button',\n  },\n}"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    // size: 'small',\n    // label: 'Button',\n  },\n}"
-                }
-            ],
-            "projects/sirius-ui-lib/src/components/header/header.stories.ts": [
+            "projects/sirius-ui-lib/src/components/Page/page.stories.ts": [
                 {
                     "name": "LoggedIn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<HeaderComponent>",
-                    "defaultValue": "{\n  title: 'Components/Header',\n  component: HeaderComponent,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  args: {\n    onLogin: fn(),\n    onLogout: fn(),\n    onCreateAccount: fn(),\n  },\n}"
-                }
-            ],
-            "projects/sirius-ui-lib/src/components/page/page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -424,11 +344,11 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\n  title: 'Components/Page',\n  component: PageComponent,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                    "defaultValue": "{\n  title: 'Components/Page',\n  component: PageComponent,\n  parameters: {\n    layout: 'fullscreen',\n  },\n}"
                 }
             ],
             "projects/sirius-ui-lib/.storybook/preview.ts": [
@@ -447,39 +367,26 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/sirius-ui-lib/src/components/button/button.stories.ts": [
+            "projects/sirius-ui-lib/src/components/Button/button.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 183
                 }
             ],
-            "projects/sirius-ui-lib/src/components/header/header.stories.ts": [
+            "projects/sirius-ui-lib/src/components/Header/header.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<HeaderComponent>",
-                    "file": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ModeloComponent>",
-                    "file": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -499,13 +406,26 @@
                     "kind": 183
                 }
             ],
-            "projects/sirius-ui-lib/src/components/page/page.stories.ts": [
+            "projects/sirius-ui-lib/src/components/Page/page.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<PageComponent>",
-                    "file": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                    "file": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SidebarComponent>",
+                    "file": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -525,6 +445,96 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Button/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/sirius-ui-lib/src/components/Header/header.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -560,67 +570,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/button/button.stories.ts",
-                "type": "type alias",
-                "linktype": "miscellaneous",
-                "linksubtype": "typealias",
-                "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -630,17 +580,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -650,7 +590,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/header/header.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Page/page.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -660,77 +600,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Large",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/modelo/modelo.stories.ts",
-                "type": "type alias",
-                "linktype": "miscellaneous",
-                "linksubtype": "typealias",
-                "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -740,7 +620,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/sirius-ui-lib/src/components/page/page.stories.ts",
+                "filePath": "projects/sirius-ui-lib/src/components/Sidebar/Sidebar.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

@@ -1,0 +1,17 @@
+<div class="sidebar-components">
+  <button class="burguer-menu" (click)="toggleSidebar()">
+    <img [src]="burgerMenu"  />
+  </button>
+  <div class="sidebar" [class.active]="isOpen">
+    <header>Menu</header>
+    <ul>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="fas fa-link"></i>Shortcuts</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="fas fa-stream"></i>Overview</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="fas fa-calendar-week"></i>Events</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="far fa-question-circle"></i>About</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="fas fa-sliders-h"></i>Services</a></li>
+      <li><a href="javascrion:void(0)" (click)="toggleSidebar()"><i class="far fa-envelope"></i>Contact</a></li>
+    </ul>
+  </div>
+</div>

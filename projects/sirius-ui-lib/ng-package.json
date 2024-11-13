@@ -7,6 +7,9 @@
       "../../node_modules/@progress/kendo-theme-default/dist/all.css"
     ]
   },
-  "assets": ["@progress/kendo-theme-default/dist/all.css"],
+  "assets": [
+    "@progress/kendo-theme-default/dist/all.css", 
+    { "glob": "*", "input": "./src/assets", "output": "./assets/" }
+  ],
   "allowedNonPeerDependencies": ["@progress/kendo-theme-default"]
 }
