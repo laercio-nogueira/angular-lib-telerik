@@ -1,6 +1,6 @@
 {
   "name": "sirius",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
     "storybook": "ng run sirius-ui-lib:storybook",
     "build": "ng build",
