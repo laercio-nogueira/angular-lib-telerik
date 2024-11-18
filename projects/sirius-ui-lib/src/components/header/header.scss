@@ -1,0 +1,48 @@
+@import "../../../../../node_modules/@progress/kendo-theme-default/dist/all.scss";
+@import "../../../../../node_modules/@progress/kendo-font-icons/dist/index.css";
+
+.sirius-lib-header {
+  display: flex;
+  grid-column: span 12;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #303030;
+
+  & h1 {
+    display: inline-block;
+    color: #fff;
+    margin: 6px 0 6px 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  
+  & .icon-menu {
+    background: none;
+    border: none;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  & .menu-icons {
+    width: 10px;
+    vertical-align: middle;
+  }
+
+  & .config-wrapper {
+
+    & button {
+      background: none;
+      border: none;
+      vertical-align: middle;
+      cursor: pointer;
+      padding: 10px
+    }
+
+  }
+}
+
+

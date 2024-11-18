@@ -1,0 +1,48 @@
+@import "@progress/kendo-font-icons/dist/index.css";
+
+.accordion {
+  transition: all .5s ease;
+
+  & button {
+    background: #303030;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+  &--panel {
+    padding: 0 18px;
+    display: none;
+    background: #404040;
+    color: #fff;
+    overflow: hidden;
+    transition: all .5s ease;
+
+    &_icon {
+      margin-right: 5px;
+    }
+  }
+
+  .open {
+    display: block;
+    transition: all .5s ease;
+  }
+
+  .accordion_icon-open {
+    float: right;
+  }
+
+  & ul {
+    list-style-type: none;
+  }
+
+  & li {
+    margin-left: -18px;
+  }
+}
+

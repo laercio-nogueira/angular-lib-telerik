@@ -1,0 +1,18 @@
+<div class="accordion">
+  <button (click)="clickAccordeon()">
+    <kendo-icon [name]="item?.icon" themeColor="light" size="small" class="accordion--panel_icon" />
+    {{ item?.title }}
+    <span *ngIf="!item?.option">
+      <kendo-icon name="chevron-down" themeColor="light" size="small" class="accordion_icon-open" *ngIf="!isOpen"/>
+      <kendo-icon name="chevron-up" themeColor="light" size="small" class="accordion_icon-open" *ngIf="isOpen"/>
+    </span>
+  </button>
+  <div class="accordion--panel" [class.open]="isOpen">
+    <ul>
+      <li *ngFor="let value of item?.options">
+        <kendo-icon [name]="value?.icon" themeColor="light" size="small" class="accordion--panel_icon" />
+        {{ value.label }}
+      </li>
+    </ul>
+  </div>
+</div>

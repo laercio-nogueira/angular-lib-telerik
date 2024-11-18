@@ -5,14 +5,7 @@ import { KENDO_BUTTONS } from "@progress/kendo-angular-buttons";
   selector: 'sirius-lib-button',
   standalone: true,
   imports: [KENDO_BUTTONS],
-  template: ` <button
-      kendoButton
-      themeColor="tertiary"
-      type="button"
-      (click)="onClick.emit($event)"
-    >
-      {{ label }}
-    </button>`,
+  templateUrl: './button.component.html',
   styleUrls: ['./button.scss'],
   styles: [],
 })

@@ -1,0 +1,22 @@
+<header>
+  <div class="sirius-lib-header">
+    <div>
+      <button class="icon-menu" (click)="eventClick()">
+        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 18L20 18" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 6L20 6" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <h1>Acme</h1>
+    </div>
+    <div class="config-wrapper">
+      <button><kendo-icon name="gear" themeColor="light" size="xlarge"></kendo-icon></button>
+      <button><kendo-icon name="bell" themeColor="light" size="xlarge"></kendo-icon></button>
+      <button><kendo-icon name="envelope" themeColor="light" size="xlarge"></kendo-icon></button>
+      <kendo-avatar [imageSrc]="accountImg" size="medium"></kendo-avatar>
+      <button><kendo-icon name="cloud" themeColor="light" size="xlarge"></kendo-icon></button>
+    </div>
+  </div>
+</header>
+

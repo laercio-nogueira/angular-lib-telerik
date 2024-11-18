@@ -21,9 +21,5 @@ export default meta;
 type Story = StoryObj<HeaderComponent>;
 
 export const Default: Story = {
-  args: {
-    user: {
-      name: 'Jane Doe',
-    },
-  },
+  args: {},
 };

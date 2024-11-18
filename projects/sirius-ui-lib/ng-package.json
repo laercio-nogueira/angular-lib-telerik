@@ -4,12 +4,16 @@
   "lib": {
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": [
-      "../../node_modules/@progress/kendo-theme-default/dist/all.css"
+      "../../node_modules/@progress/kendo-theme-default/dist/all.css",
+      "../../node_modules/@progress/kendo-theme-default/dist/default-ocean-blue.css",
+      "@progress/kendo-theme-default/dist/all.css",
+      "@progress/kendo-theme-default/dist/default-ocean-blue.css"
     ]
   },
   "assets": [
-    "@progress/kendo-theme-default/dist/all.css", 
-    { "glob": "*", "input": "./src/assets", "output": "./assets/" }
+    "@progress/kendo-theme-default/dist/all.css",
+    "@progress/kendo-theme-default/dist/default-ocean-blue.css",
+    { "glob": "*", "input": "./src/components/assets", "output": "./assets/" }
   ],
   "allowedNonPeerDependencies": ["@progress/kendo-theme-default"]
 }
